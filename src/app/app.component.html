@@ -1,5 +1,12 @@
-    <nz-layout>
-      <nz-header>NUBIS</nz-header>
-      <nz-content>Content</nz-content>
-      <nz-footer>Made with ♡ by Sean Swanson &copy; '21</nz-footer>
-    </nz-layout>
+<nz-layout>
+  <nz-header>NUBIS</nz-header>
+  <nz-content>
+    <nz-card style="width: 300px; margin: 10px auto">
+      <nz-select [formControl]="cityControl" style="width: 100%;">
+        <nz-option *ngFor="let city of cities; let i = index;" [nzValue]="city" [nzLabel]="city"></nz-option>
+      </nz-select>
+    </nz-card>
+  </nz-content>
+  <nz-footer>Made with ♡ by Sean Swanson &copy; '21</nz-footer>
+  <router-outlet></router-outlet>
+</nz-layout>
