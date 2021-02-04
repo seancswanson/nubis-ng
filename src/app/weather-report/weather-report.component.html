@@ -1,1 +1,15 @@
-<h1>{{ locationName }}</h1>
+<nz-card *ngIf="data$ | async as data">
+  <div class="weather-report-container" >
+    <h1>{{ data.name }}'s Weather</h1>
+    <h2>Today: {{today | date }}</h2>
+    <div class="weather-result-container">
+      <nz-card>
+        {{data.main.temp | number:'0.0-0'}}
+      </nz-card>
+      <nz-card>
+
+      </nz-card>
+    </div>
+  </div>
+</nz-card>
+

@@ -2,13 +2,11 @@
   <app-header></app-header>
   <nz-content>
     <nz-card>
-      <nz-select [formControl]="cityControl" style="width: 100%;" nzAllowClear nzPlaceHolder="Select a city">
+      <nz-select [formControl]="cityControl" style="width: 100%;" nzShowSearch nzAllowClear nzPlaceHolder="Select a city">
         <nz-option *ngFor="let city of cities; let i = index;" [nzValue]="city" [nzLabel]="city"></nz-option>
       </nz-select>
     </nz-card>
-    <nz-card>
       <router-outlet></router-outlet>
-    </nz-card>
   </nz-content>
   <app-footer></app-footer>
 </nz-layout>
